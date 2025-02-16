@@ -1,8 +1,9 @@
 <?php
 
+use App\Models\job;
+use App\Models\Jobs;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
-use App\Models\job;
 
 
 Route::get('/', function () {
@@ -10,12 +11,12 @@ Route::get('/', function () {
 });
 Route::get('/jobs', function () {
     return view('jobs',[
-        'jobs'=> job::all()
+        'jobs'=> Jobs::all()
     ]);
 });
 Route::get('/job/{id}', function ($id) {
     
-   $job = job::find($id);
+   $job = Jobs::find($id);
     return view('job',[
        'job'=> $job
     ]);
