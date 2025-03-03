@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello there</h1>
+    <nav>
+        <a href="/">home</a>
+        <a href="/about">about</a>
+        <a href="/contact">contact</a>
+    </nav>
+    {{ $slot }}
 </body>
 </html>
